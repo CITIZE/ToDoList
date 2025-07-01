@@ -1,0 +1,58 @@
+.container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: calc(var(--index) * 5);
+	padding-inline: calc(var(--index) * 2);
+	position: relative;
+	box-shadow: 0 0 5px 1px rgba(0,0,0,.35);
+}
+.container::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	clip-path: polygon(
+		0 calc(calc(var(--index) * 5) - 15%),
+		0 101%,
+		100% 101%,
+		100% calc(calc(var(--index) * 5) - 15%),
+		50% calc(calc(var(--index) * 5) - 2%)
+	);
+	width: 100%;
+	height: 100%;
+	background-color: var(--color-text-header);
+}
+
+.buttonAddToDo {
+	background-color: var(--button-green-color);
+	height: calc(var(--index) * 3);
+	width: calc(var(--index) * 3);
+	position: absolute;
+	left:50%;
+	right:50%;
+	transform: translate(-50%, 0);
+	border: 2px solid var(--button-green-color);
+	box-sizing: content-box;
+	border-radius: 50%;
+	box-shadow: var(--container-shadow);
+	cursor: pointer;
+	transition: transform .4s;
+	fill: var(--color-text-main);
+}
+
+.buttonAddToDo:hover {
+	transform: scale(1.15) translate(-43%, 0);
+}
+
+.exitNameContainer {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 20px;
+}
+
+.nameH3 {
+	color: var(--color-text-header);
+	font-size: calc(var(--index) * .85);
+}

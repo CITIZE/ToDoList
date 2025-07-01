@@ -1,0 +1,64 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+:root {
+	/* #c8ffbf */
+	--c1: #212121;
+	--c2: #E8A236;
+	--index: calc(1vw + 1vh);
+	--bgc-color-header: var(--c2);
+	--bgc-color-main: var(--c1);
+	--container-shadow: 1px 1px 5px 0 rgba(0, 0, 0, .15);
+	--button-typical-color: transparent;
+	--button-green-color: var(--c1);
+	--button-red-color: var(--c1);
+	--color-text-main: var(--c2);
+	--color-text-header: var(--c1);
+}
+
+@font-face {
+	font-family: lorenzo;
+	src: url(./shared/fonts/Lorenzo\ Sans\ Regular.ttf);
+}
+
+@font-face {
+	font-family: catri;
+	src: url(./shared/fonts/Catrinity.otf);
+}
+
+img {
+	max-width: 100vw;
+}
+
+.App {
+	width: 100%;
+}
+
+body {
+	/* background: url(./shared/images/97110c94f25d6306c488e76650e8d52e.jpg); */
+	background-color: #fff;
+	/* background-size: 18%; */
+	overflow-x: hidden;
+	scrollbar-gutter: stable both-edges;
+}
+body::before {
+	z-index: -1;
+	content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	opacity: .65;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: lorenzo;
+}
+
+span,label,p {
+	font-family: catri;
+}

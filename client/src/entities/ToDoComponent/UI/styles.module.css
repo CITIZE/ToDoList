@@ -1,0 +1,90 @@
+.container {
+	width: 100%;
+	height: 100%;
+	padding: calc(var(--index) * 1);
+	background-color: #ececec;
+	border-radius: 10px;
+	box-shadow: var(--container-shadow);
+	border: 2px outset transparent;
+	transition: border .3s;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-sizing: border-box;
+	overflow: hidden;
+	outline: 2px solid #000;
+	transition: all .3s;
+}
+
+.container:not(:last-of-type) {
+	margin-bottom: calc(var(--index) * .8);
+}
+
+.container:hover {
+	cursor: pointer;
+	box-shadow: none;
+	background-color: #d0d0d0;
+}
+.toDoTitleContainer {
+	display: flex;
+	align-items: baseline;
+	font-size: calc(var(--index) * 1);
+	font-weight: 400;
+}
+
+.toDoH3, .toDoP, .toDoIdLabel {
+	color: #000;
+	font-weight: 400;
+	letter-spacing: calc(var(--index) *.1);
+}
+
+.toDoIdLabel {
+	font-family: lorenzo;
+	font-size: calc(var(--index) * 1.45);
+}
+
+.toDoP {
+	font-size: calc(var(--index) * 1);
+	letter-spacing: calc(var(--index) *.01);
+}
+
+.toDoH3, .toDoP {
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient:block-axis;
+	word-break: break-word;
+	overflow: hidden;
+	margin-right: calc(var(--index));
+}
+
+.toDoH3 {
+	font-size: calc(var(--index) * 1.5);
+}
+
+.toDoH3:not(.more), .toDoP:not(.more) {
+	-webkit-line-clamp: 1;
+}
+
+.more {
+	-webkit-line-clamp: 0;
+}
+
+
+.deleteToDoButton {
+	color: var(--color-text-main);
+	background-color: var(--bgc-color-main);
+	border: none;
+	box-shadow: var(--container-shadow);
+	border-radius: 10px;
+	padding: calc(var(--index) *.3);
+	cursor: pointer;
+	font-weight: 600;
+	font-size: calc(var(--index) * .7);
+	transition: all .3s;
+}
+.deleteToDoButton:hover {
+	background-color: var(--bgc-color-header);
+	color: var(--color-text-header)
+}
+
+

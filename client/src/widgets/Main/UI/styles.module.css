@@ -1,0 +1,102 @@
+.container {
+	width: 100%;
+	min-height: calc(100dvh - calc(var(--index) * 5));
+	box-shadow: var(--container-shadow);
+	background-color: var(--bgc-color-main);
+}
+
+.tasksH2 {
+	color: var(--color-text-main);
+	font-size: calc(var(--index) * 2.5);
+	text-align: center;
+	font-weight: 400;
+}
+
+.mainLendingText {
+	font-size: calc(var(--index) * 4.5);
+	font-weight: 600;
+}
+
+.mainLendingContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	min-height: calc(100dvh - calc(var(--index) * 5));
+	gap: calc(var(--index) *.1);
+	text-transform: uppercase;
+	background-image: url(../../../shared/images/moscow-kremlin-summer-night.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: rgba(0,0,0,.75);
+	background-blend-mode: multiply;
+}
+
+.mainLendingContainer h2:nth-child(1) {
+	color:#fff;
+	margin-inline-end: calc(var(--index) * 25);
+	animation: text1;
+	animation-duration: 15s;
+	animation-iteration-count: infinite;
+}
+
+.mainLendingContainer h2:nth-child(2) {
+	color: red;
+	animation: text2;
+	animation-duration: 15s;
+	animation-iteration-count: infinite;
+}
+
+.mainLendingContainer h2:nth-child(3) {
+	color:blue;
+	margin-inline-start: calc(var(--index) * 25);
+	animation: text3;
+	animation-duration: 15s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes text1 {
+	0%{
+		transform: scale(1);
+	}
+	5% {
+		transform: scale(1.5);
+	}
+	15% {
+		transform: scale(1.5);
+	}
+	20% {
+		transform: scale(1);
+	}
+}
+
+@keyframes text2 {
+	15%{
+		transform: scale(1);
+	}
+	20% {
+		transform: scale(1.5);
+	}
+	30% {
+		transform: scale(1.5);
+	}
+	35% {
+		transform: scale(1);
+	}
+}
+
+@keyframes text3 {
+	30%{
+		transform: scale(1);
+	}
+	35% {
+		transform: scale(1.5);
+	}
+	45% {
+		transform: scale(1.5);
+	}
+	50% {
+		transform: scale(1);
+	}
+}

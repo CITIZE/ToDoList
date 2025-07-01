@@ -1,0 +1,43 @@
+.container {
+	min-height: calc(100dvh - calc(var(--index) * 8));
+	width: 100%;
+	padding: calc(var(--index) * 2);
+	filter: drop-shadow(1px 1px 5px rgba(0, 0, 0, 0.1));
+	position: relative;
+	z-index: 3;
+}
+
+.container>.flexContainer {
+	height: calc(100dvh - calc(var(--index) * 11));
+}
+
+.noToDoH2 {
+	font-family: lorenzo;
+	font-weight: 400;
+	font-size: calc(var(--index) * 2.5);
+	color: var(--color-text-main)
+}
+
+.flexContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.tasksH3 {
+	margin-bottom: calc(var(--index) *.8);
+	font-size: calc(var(--index) * 1.2);
+	font-weight: 600;
+	letter-spacing: calc(var(--index) *.08);
+	line-clamp: 1;
+	color: var(--color-text-main);
+}
+
+.toDoContainer {
+	background-color: var(--bgc-color-main);
+	padding: calc(var(--index) * .8);
+	overflow: hidden;
+	clip-path: polygon(0 0, 50% 0, 65% calc(var(--index) * 2.2), 100% calc(var(--index) * 2.2),100% 100%, 0 100%);
+	backdrop-filter: opacity(.5);
+}

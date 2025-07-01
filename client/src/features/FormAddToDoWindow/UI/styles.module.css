@@ -1,0 +1,137 @@
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	background-color: #fff;
+	width: 100vw;
+	height: 100dvh;
+	left: 0;
+	top: 0;
+	animation: container linear .4s forwards;
+	z-index: 10;
+}
+
+.form {
+	position: relative;
+	width: 90%;
+	height: 95dvh;
+	background-color: #fff;
+	border-radius: 10px;
+	transition: background-color .4s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: calc(var(--index) * 3);
+	gap: calc(var(--index));
+
+	div, input {
+		min-width: 100%;
+	}
+	input::placeholder, textarea::placeholder {
+		font-size: calc(var(--index) * .8);
+		opacity: .3;
+	}
+
+	textarea {
+		resize: none;
+		min-height: calc(var(--index)*13);
+		max-width: 100%;
+		font-size: calc(var(--index) *.8);
+	}
+
+	label {
+		font-family: lorenzo;
+		font-size: calc(var(--index) * 1)
+	}
+}
+
+.buttonsContainer {
+	display: flex;
+	flex-direction: row;
+	gap: calc(var(--index) * .5);
+
+	button:first-child {
+		width: 70%;
+	}
+
+	button:hover:first-child {
+		background-color: #e0e0e0;
+	}
+
+	button:nth-child(2n) {
+		width: 30%;
+	}
+}
+
+@keyframes container {
+	from {
+		background-color: rgba(255,255,255,.4);
+	}
+	to {
+		background-color: rgba(0,0,0,.4);
+	}
+}
+
+.formAddToDoWindowH2 {
+	font-family: catri;
+	font-size: calc(var(--index) * 1.75);
+	font-weight: 400;
+}
+
+.inputContainer {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	gap: calc(var(--index) *.5)
+}
+
+.formAddToDoInput {
+	font-family: lorenzo;
+	font-weight: 400;
+	font-size: calc(var(--index) * 1);
+	color: var(--text-color);
+	padding: calc(var(--index) *.4);
+	border-radius: 10px;
+	border: none;
+	box-shadow: var(--container-shadow);
+}
+
+.closeAddToDoForm {
+	position: absolute;
+	width: calc(var(--index) * 1.5);
+	top: calc(var(--index));
+	right: calc(var(--index));
+	cursor: pointer;
+	transition: transform .3s;
+}
+
+.closeAddToDoForm:hover {
+	transform: scale(1.3);
+}
+
+.errorText {
+	color: var(--button-red-color);
+	font-family: lorenzo;
+	font-size: calc(var(--index) * .8);
+	min-height: calc(var(--index) * .8);
+}
+
+.buttonChoiceDate {
+	font-family: lorenzo;
+	font-weight: 400;
+	font-size: calc(var(--index) * 1);
+	color: var(--text-color);
+	cursor: pointer;
+	padding: calc(var(--index) *.4);
+	border-radius: 10px;
+	border: none;
+	box-shadow: var(--container-shadow);
+	transition: background-color .3s;
+	background-color: var(--button-typical-color);
+}
+
+.errorTitle {
+	outline: 1.5px solid var(--button-red-color);
+}

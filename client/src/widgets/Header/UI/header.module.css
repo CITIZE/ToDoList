@@ -1,0 +1,8 @@
+.header {
+	width: 100%;
+	height: calc(var(--index) * 5);
+	background-color: var(--bgc-color-header);
+	color: var(--text-color);
+	box-shadow: var(--container-shadow);
+	margin-bottom: calc(var(--index) * 0);
+}

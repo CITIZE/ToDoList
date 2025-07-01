@@ -1,0 +1,22 @@
+.preloader {
+	max-width: 100vw;
+	height: 100dvh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+.svg {
+	width: 100%;
+	height: 100%;
+}
+
+.animatedCircle {
+	animation: dash 1.5s ease infinite alternate;
+}
+
+@keyframes dash {
+	to {
+		stroke-dashoffset: calc(10vw*3.14*3);
+	}
+}

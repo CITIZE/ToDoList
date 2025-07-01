@@ -1,0 +1,33 @@
+.greenButton {
+	background-color: var(--button-green-color);
+}
+
+.redButton {
+	background-color: var(--button-red-color);
+}
+
+.typicalButton {
+	background-color: var(--button-typical-color);
+	color: var(--color-text-header);
+}
+
+.button {
+	font-family: lorenzo;
+	font-weight: 400;
+	font-size: calc(var(--index) * 1);
+	cursor: pointer;
+	padding: calc(var(--index) *.4);
+	border-radius: 10px;
+	border: none;
+	box-shadow: var(--container-shadow);
+	transition: background-color .3s;
+}
+
+.button:not(.typicalButton) {
+	color: var(--color-text-main);
+}
+
+.button:hover {
+	background-color: rgba(0,0,0,.1);
+	color:var(--color-text-header);
+}

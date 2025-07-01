@@ -1,0 +1,41 @@
+.headerH1 {
+	font-family: catri;
+	font-size: calc(var(--index) * 4);
+	font-weight: 400;
+	padding-left: calc(var(--index) * 5.8);
+}
+
+.headerLendingContainer {
+	display: flex;
+	justify-content: end;
+	padding-inline-end: calc(var(--index) * 2);
+	align-items: center;
+	height: calc(var(--index) * 5);
+	position: relative;
+}
+.headerLendingContainer::after {
+	content: '';
+	position: absolute;
+	width: 100vw;
+	height: 100%;
+	background-color: var(--bgc-color-header);
+	margin-top: calc(var(--index) * 10);
+	clip-path: polygon(
+		0 0,
+		50% 10px,
+		100% 0
+	);
+}
+
+.headerLendingSVG {
+	height: calc(var(--index) * 3.5);
+	position: absolute;
+	top: 0;
+	padding-left: calc(var(--index) * 2);
+}
+
+.buttonContainer {
+	display: flex;
+	gap: calc(var(--index))
+}
+

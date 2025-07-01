@@ -1,0 +1,113 @@
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	background-color: #fff;
+	width: 100vw;
+	height: 100dvh;
+	left: 0;
+	top: 0;
+	animation: container linear .4s forwards;
+	z-index: 1;
+}
+
+.form {
+	position: relative;
+	width: calc(var(--index) * 25);
+	background-color: #fff;
+	border-radius: 10px;
+	transition: background-color .4s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: calc(var(--index) * 3);
+	gap: calc(var(--index));
+
+	button, input {
+		min-width: 100%;
+	}
+	input::placeholder {
+		font-size: calc(var(--index)* 1);
+		opacity: .3;
+	}
+
+	label, a {
+		font-family: lorenzo;
+		font-size: calc(var(--index) * .8)
+	}
+}
+.formReg {
+	height: calc(var(--index) * 30);
+}
+.formAuth {
+	height: calc(var(--index) * 25);
+}
+
+@keyframes container {
+	from {
+		background-color: transparent;
+	}
+	to {
+		background-color: rgba(0,0,0,.4);
+	}
+}
+
+.formAuthWindowH2 {
+	font-family: catri;
+	font-size: calc(var(--index) * 1.75);
+	font-weight: 400;
+}
+
+.inputContainer {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	gap: calc(var(--index) *.5)
+}
+
+.formAuthInput {
+	font-family: lorenzo;
+	font-weight: 400;
+	font-size: calc(var(--index) * 1);
+	color: var(--text-color);
+	padding: calc(var(--index) *.4);
+	border-radius: 10px;
+	border: none;
+	box-shadow: var(--container-shadow);
+}
+
+.closeAuthForm {
+	position: absolute;
+	width: calc(var(--index) * 1.5);
+	top: calc(var(--index));
+	right: calc(var(--index));
+	cursor: pointer;
+	transition: transform .3s;
+}
+
+.closeAuthForm:hover {
+	transform: scale(1.3);
+}
+
+.errorText {
+	color: var(--button-red-color);
+	font-family: lorenzo;
+	font-size: calc(var(--index) * .8);
+	height: calc(var(--index) * .8);
+	padding-top: calc(var(--index));
+}
+
+.linkReg {
+	color: blue;
+	transition: color .4s;
+	text-decoration: none;
+}
+
+.linkReg:hover {
+	color: var(--button-green-color);
+}
+.containerNoAccount {
+	text-align: center;
+}
