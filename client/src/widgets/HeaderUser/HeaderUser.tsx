@@ -29,14 +29,14 @@ export function HeaderUser() {
 		let result = "";
 		
 		if (firstWord.length > 20) {
-			result += firstWord[0] + ".";
+			result += firstWord[0] + ". ";
 		} else {
 			result += firstWord + " ";
 		}
 		const words = name.split(' ').slice(1);
 		words.forEach(word => {
 			if (word.length > 0) { 
-				result += word[0] + ".";
+				result += word[0] + ". ";
 			}
 		});
 		return result;
