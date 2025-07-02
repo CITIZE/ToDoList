@@ -19,9 +19,36 @@
   <p>Проект был разработан с следующими целями: </p>
   <ul>
     <li>изучение связки бэка с фронтом - использовал БД PostgreSQL, сервер на express, для связи с фронтом использовал нативный JavaScript;</li>
-    <li>закрепление теоретических знаний в React и TypeScript на практике и их расширение;</li> 
+    <li>закрепление теоретических знаний React и TypeScript на практике и их расширение;</li> 
     <li>изучение архитектуры FSD;</li> 
     <li>ознакомление с Redux Toolkit (использовал на базовом уровне).</li>
   </ul><br>
   <p>Каждый лист с задачами создаётся при создании нового аккаунта. В окне добавления задачи Вы можете выбрать дату и время, к которым нужно выполнить ту или иную задачу. Задачи сортируются по времени от меньшего к большему.</p>
+  <li><h2>Используемый стек:</h2></li>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>FSD</li>
+      <li>БЭМ</li>
+    </ul>
+  <h3><b>Бэкенд:</b></h3>
+    <ul>
+      <li>JavaScript</li>
+      <li>PostgreSQL</li>
+      <li>Express</li>
+      <li>bcrypt</li>
+      <li>cors</li>
+      <li>pg</li>
+      <li>pg-hstore</li>
+      <li>dotenv</li>
+      <li>sequelize</li>
+      <li>jsonwebtoken</li>
+    </ul>
+  <h3><b>Фронтенд:</b></h3>
+    <ul>
+      <li>TypeScript</li>
+      <li>React</li>
+      <li>React Router DOM</li>
+      <li>Redux Toolkit</li>
+    </ul>
 </ol>
